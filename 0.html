@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD 響應式導航欄</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        /* RWD 設計 */
+        @media screen and (max-width: 431px) {
+            body {
+                padding-top: 50px; /* 為固定導航欄預留空間 */
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: fixed;
+                top: 0;
+                left: 0;
+                padding: 0;
+                z-index: 1000;
+            }
+
+            .menu-toggle {
+                display: block;
+                width: 100%;
+                padding: 15px;
+                background-color: #333;
+                color: white;
+                border: none;
+                cursor: pointer;
+                text-align: center;
+                font-size: 16px;
+            }
+
+            .sidebar h2 {
+                display: none;
+            }
+
+            .sidebar ul {
+                display: none;
+                padding: 10px 0;
+                margin: 0;
+                background-color: #333;
+            }
+
+            .sidebar ul.show {
+                display: block;
+            }
+
+            .sidebar ul li {
+                margin: 0;
+                text-align: center;
+            }
+
+            .sidebar ul li a {
+                display: block;
+                padding: 15px;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 15px;
+            }
+
+            /* 添加過渡動畫 */
+            .sidebar ul {
+                transition: all 0.3s ease-in-out;
+                max-height: 0;
+                overflow: hidden;
+            }
+
+            .sidebar ul.show {
+                max-height: 300px;
+            }
+
+            /* 箭頭旋轉動畫 */
+            .menu-toggle .arrow {
+                display: inline-block;
+                transition: transform 0.3s ease;
+            }
+
+            .menu-toggle.active .arrow {
+                transform: rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <button class="menu-toggle">
+            <span class="arrow">▼</span>
+        </button>
+        <h2>導航欄</h2>
+        <ul>
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#about">關於我們</a></li>
+            <li><a href="#services">服務</a></li>
+            <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>歡迎來到我的網站</h1>
+        <p>這是主要內容區域。這是主要內容區域。這是主要內容區域。</p>
+        <p>這是主要內容區域。這是主要內容區域。這是主要內容區域。</p>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.sidebar ul');
+        
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+            menuToggle.classList.toggle('active');
+        });
+
+        // 點擊導航項目時自動收起選單
+        const menuItems = document.querySelectorAll('.sidebar ul li a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth <= 430) {
+                    menu.classList.remove('show');
+                    menuToggle.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
