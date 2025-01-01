@@ -139,13 +139,57 @@
 
         /* RWD 設計 */
         @media screen and (max-width: 431px) {
+            body, div, ul, li, h1, h2, p, a, img {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 100%;
+  font-family: inherit;
+  line-height: normal;
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+  box-sizing: border-box;
+  background: none;
+}
+
+img {
+  max-width: 100px;
+  max-height: 100px;
+  display: inline; /* 默認行內元素 */
+}
+
+.grid-container, .grid-text, .grid-image, .text-container, .gap_a, .content, .menu-toggle {
+  display: block; /* 重置為塊級元素 */
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* 恢復默認對齊 */
+}
+
+.sidebar, .sidebar h2, .sidebar ul, .sidebar ul li, .sidebar ul li a, .description, .description-list {
+  all: unset; /* 重置所有樣式 */
+}
+
+.padding-right-400, .padding-right-150, .padding-right-420 {
+  padding-right: 0; /* 移除額外內邊距 */
+}
+
+.image-class {
+  display: inline;
+  background: none; /* 清除背景設置 */
+  margin: 0; /* 移除上下內邊距 */
+}
+
             body {
                 padding-top: 50px; /* 為固定導航欄預留空間 */
+                background-image: url(img/bg.png);
             }
 
             .sidebar {
                 width: 100%;
                 height: auto;
+                color: white; 
                 position: fixed;
                 top: 0;
                 left: 0;
