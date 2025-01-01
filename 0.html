@@ -46,7 +46,11 @@
         }
 
         .content {
-            margin-left: 220px;
+            display: flex; /* 啟用 Flexbox */
+            justify-content: center; /* 水平置中 */
+            align-items: top; 
+            margin: 0; /* 移除多餘邊距 */
+            text-align: center; /* 讓文字水平居中 */
             padding: 20px;
         }
         .content h1{
@@ -60,10 +64,14 @@
             line-height: 0.3; 
         }
         .description {
-  font-size: 32px; /* 適中的文字大小 */
+  font-size: 30px; /* 適中的文字大小 */
   line-height: 1.6; /* 增加行高，提升可讀性 */
   font-family: "Arial", "新細明體", sans-serif; /* 選擇常見的字體 */
 }
+.smaller-text {
+  font-size: 24px; 
+}
+
 
 .description-list {
   list-style-type: none; /* 去掉項目前面的點 */
@@ -92,13 +100,22 @@
         .menu-toggle {
             display: none;
         }
+        .padding-right-400{
+            padding-right: 300px; /* 添加右側內邊距，讓網格稍微靠左 */
+        }
+        .padding-right-150{
+            padding-right: 150px; 
+        }
+        .padding-right-420{
+            padding-right: 420px; 
+        }
         .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr; /* 左右兩欄，均等寬度 */
   align-items: center; /* 上下置中對齊 */
   justify-items: center; /* 左右置中對齊 */
-  gap: 10px; /* 文字與圖片間的間距 */
-  max-width: 800px; /* 限制網格的最大寬度 */
+  gap: 0px; /* 文字與圖片間的間距 */
+  max-width: 400px; /* 限制網格的最大寬度 */
   margin: 0 auto; /* 網格置中 */
 }
 
@@ -109,12 +126,16 @@
   text-align: center; /* 多行文字水平居中 */
   line-height: 1.6; /* 行高 */
 }
-
+.text-container {
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  align-items: center; /* 水平置中（可選） */
+  gap: 1px; /* 元素之間的間距 */
+}
 .grid-image {
   max-width: 100%; /* 圖片寬度不超過容器 */
   height: auto; /* 保持圖片比例 */
 }
-
 
         /* RWD 設計 */
         @media screen and (max-width: 431px) {
@@ -218,7 +239,7 @@
         </div>
     </div>
     <div class="content">
-        <div class="grid-container">
+        <div class="grid-container padding-right-400">
         <div class="grid-text">
             <li class="description description-list" style="color:yellow;"><a href="https://sites.google.com/view/cycustudentclub/" target="_blank">社團總覽</a></li>
         </div>
@@ -227,7 +248,29 @@
         </div>
     </div>
     </div>
-
+    <div class="content">
+        <div class="grid-container padding-right-150">
+        <div class="grid-image">
+            <img src="img/panda.png" class="image-class">
+        </div>
+        <div class="grid-text text-container">
+            <li class="description description-list" style="color:#F75000;"><a href="https://fm.cycu.edu.tw/" target="_blank">新生一網通</a></li>
+            <p class="description description-list smaller-text" style="color:#004B97;"><a href="https://fm.cycu.edu.tw/大學部新生及暑轉生/註冊篇/新生註冊規定/" target="_blank">  註冊篇</a></p>
+            <p class="description description-list smaller-text" style="color:#004B97;"><a href="https://fm.cycu.edu.tw/大學部新生及暑轉生/選課篇/選課時間/" target="_blank">選課篇</a></p>
+            <p class="description description-list smaller-text" style="color:#004B97;"><a href="https://fm.cycu.edu.tw/大學部新生及暑轉生/資料填寫區/資料填寫/" target="_blank">  資料填寫</a></p>
+        </div>
+    </div>
+    </div>
+    <div class="content">
+        <div class="grid-container padding-right-500">
+        <div class="grid-text">
+            <li class="description description-list" style="color:#4B0091;"><a href="https://acadm.cycu.edu.tw/課務與註冊組聯合行服務中心/新生專區/" target="_blank">新生資料冊</a></li>
+        </div>
+        <div class="grid-image">
+            <img src="img/goat.png" class="image-class">
+        </div>
+    </div>
+    </div>
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.sidebar ul');
