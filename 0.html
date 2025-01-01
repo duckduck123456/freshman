@@ -46,13 +46,32 @@
         }
 
         .content {
-            display: flex; /* 啟用 Flexbox */
-            justify-content: center; /* 水平置中 */
-            align-items: top; 
-            margin: 0; /* 移除多餘邊距 */
-            text-align: center; /* 讓文字水平居中 */
-            padding: 20px;
-        }
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+    width: 100%; /* 添加這行 */
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;  /* 設定最大寬度 */
+    margin: 0 auto;     /* 整體置中 */
+}
+.content-wrapper .content:nth-child(even) {
+    align-self: flex-end;    /* 偶數項靠右 */
+    margin-right: 45%;     /* 右側間距 */
+}
+
+.content-wrapper .content:nth-child(odd) {
+    align-self: flex-start;  /* 奇數項靠左 */
+    margin-left: 42%;      /* 左側間距 */
+}
         .tt1 {
           font-size: 50px !important; /* 提升優先權，確保生效 */
 }
@@ -65,6 +84,16 @@
         .content p{
             color:#CDCD9A;
         }
+        .content_grid {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto; /* 改為 auto */
+    padding: 15px;
+    background-color: #D9FFFF;
+    border-radius: 8px;
+    width: fit-content;
+    max-width: 100%;
+}
         .gap_a{
             margin: 0;
             line-height: 0.3; 
@@ -91,8 +120,12 @@
 }
 
 .description-list a:hover {
-  text-decoration: underline; /* 滑鼠懸停時顯示底線（可選） */
-  color: #555; /* 懸停時改變顏色（可選） */
+    background-color: #ffffff; /* 背景變為白色 */
+    color: #ff0000; /* 文字變為紅色 */
+    text-decoration: none; /* 移除底線 */
+    border-radius: 8px; /* 添加圓角，數值可以調整 */
+    padding: 4px; /* 增加內邊距，讓圓角效果更明顯 */
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease; /* 添加平滑過渡效果 */
 }
 .image-class {
   display: block; /* 確保圖片是區塊級元素 */
@@ -106,31 +139,39 @@
         .menu-toggle {
             display: none;
         }
-        .padding-right-400{
-            padding-right: 300px; /* 添加右側內邊距，讓網格稍微靠左 */
-        }
-        .padding-right-150{
-            padding-right: 150px; 
-        }
-        .padding-right-420{
-            padding-right: 420px; 
-        }
         .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 左右兩欄，均等寬度 */
-  align-items: center; /* 上下置中對齊 */
-  justify-items: center; /* 左右置中對齊 */
-  gap: 10px; /* 文字與圖片間的間距 */
-  max-width: 400px; /* 限制網格的最大寬度 */
-  margin: 0 auto; /* 網格置中 */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    margin: 0 auto; /* 添加這行 */
+    width: fit-content; /* 添加這行 */
 }
 
 .grid-text {
-  display: flex; /* 使用 Flexbox 進一步控制文字內容 */
-  align-items: center; /* 垂直居中 */
-  justify-content: center; /* 水平居中 */
-  text-align: center; /* 多行文字水平居中 */
-  line-height: 1.6; /* 行高 */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  /* 設定項目之間的間距 */
+    align-items: flex-start;  /* 讓內容靠左對齊 */
+}
+.grid-text li,
+.grid-text p {
+    margin: 0;  /* 移除預設的 margin */
+    padding: 0;  /* 移除預設的 padding */
+    width: 100%;  /* 確保每個項目佔滿寬度 */
+    line-height: 1.5;  /* 調整行高 */
+}
+
+/* 如果你想要連結也垂直排列 */
+.grid-text a {
+    display: block;  /* 讓連結變成區塊元素 */
+    margin-bottom: 5px;  /* 連結之間的間距 */
+}
+
+/* 移除最後一個連結的底部間距 */
+.grid-text a:last-child {
+    margin-bottom: 0;
 }
 .text-container {
   display: flex;
@@ -158,6 +199,11 @@
   box-sizing: border-box;
   background: none;
 }
+.content-wrapper .content:nth-child(even),
+    .content-wrapper .content:nth-child(odd) {
+        align-self: center;
+        margin: 0;
+    }
 
 img {
   max-width: 100px;
@@ -189,10 +235,6 @@ img {
 
 .sidebar, .sidebar h2, .sidebar ul, .sidebar ul li, .sidebar ul li a, .description, .description-list {
   all: unset; /* 重置所有樣式 */
-}
-
-.padding-right-400, .padding-right-150, .padding-right-420 {
-  padding-right: 0; /* 移除額外內邊距 */
 }
 
 .image-class {
@@ -270,6 +312,14 @@ img {
         margin: 2px 0;
         padding: 0;
     }
+    .description-list:hover {
+    background-color: #ffffff; /* 背景變為白色 */
+    color: #ff0000; /* 文字變為紅色 */
+    text-decoration: none; /* 移除底線 */
+    border-radius: 8px; /* 添加圓角，數值可以調整 */
+    padding: 4px; /* 增加內邊距，讓圓角效果更明顯 */
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease; /* 添加平滑過渡效果 */
+}
 
     /* 確保第二個區塊的圖片在左邊 */
     .grid-container:nth-child(even) {
@@ -378,14 +428,14 @@ img {
     <div class="content">
         <div class="gap_a">
             <h1 class="tt1">2023新生學涯體驗營</h1>
-            <p class="tt2">Freshman School Career ERxperience Camp</p>
+            <p class="tt2">Freshman School Career Experience Camp</p>
         </div>
     </div>
     <div class="content-wrapper">
         <div class="content content_grid">
-            <div class="grid-container padding-right-400">
+            <div class="grid-container ">
                 <div class="grid-text">
-                    <li class="description description-list" style="color:yellow;"><a href="https://sites.google.com/view/cycustudentclub/" target="_blank">社團總覽</a></li>
+                    <li class="description description-list" style="color:#EA7500;"><a href="https://sites.google.com/view/cycustudentclub/" target="_blank">社團總覽</a></li>
                 </div>
                 <div class="grid-image">
                     <img src="img/giraffe.png" class="image-class" alt="Giraffe">
@@ -393,7 +443,7 @@ img {
             </div>
         </div>
         <div class="content content_grid">
-            <div class="grid-container padding-right-150">
+            <div class="grid-container">
                 <div class="grid-image">
                     <img src="img/panda.png" class="image-class" alt="Panda">
                 </div>
@@ -412,7 +462,7 @@ img {
             </div>
         </div>
         <div class="content content_grid">
-            <div class="grid-container padding-right-500">
+            <div class="grid-container ">
                 <div class="grid-text">
                     <li class="description description-list" style="color:#4B0091;"><a href="https://acadm.cycu.edu.tw/課務與註冊組聯合行服務中心/新生專區/" target="_blank">新生資料冊</a></li>
                 </div>
