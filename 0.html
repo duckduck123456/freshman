@@ -213,11 +213,83 @@ img {
         font-size: 16px !important; /* 適當縮小字體大小 */
         text-align: center;
     }
-.description {
-  font-size: 22px; /* 適中的文字大小 */
-  line-height: 1.6; /* 增加行高，提升可讀性 */
-  font-family: "Arial", "新細明體", sans-serif; /* 選擇常見的字體 */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自適應列數 */
+    gap: 20px; /* 區塊間距 */
+    padding: 20px;
 }
+    /* 內容區塊的排版優化 */
+    .content_grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+        background-color: #D9FFFF;
+        border-radius: 8px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 平均分配左右兩欄 */
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    /* 圖片容器 */
+    .grid-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-class {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+    /* 文字容器 */
+    .grid-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    .description-list {
+        margin: 2px 0;
+        padding: 0;
+    }
+
+    /* 確保第二個區塊的圖片在左邊 */
+    .grid-container:nth-child(even) {
+        grid-template-areas: "image text";
+    }
+
+    /* 確保第一個區塊的圖片在右邊 */
+    .grid-container:nth-child(odd) {
+        grid-template-areas: "text image";
+    }
+
+    /* 根據區域分配內容 */
+    .grid-container .grid-image {
+        grid-area: image;
+    }
+
+    .grid-container .grid-text {
+        grid-area: text;
+    }
+
             .sidebar {
                 width: 100%;
                 height: auto;
@@ -266,11 +338,6 @@ img {
                 padding: 15px;
             }
 
-            .content {
-                margin-left: 0;
-                padding: 15px;
-            }
-
             /* 添加過渡動畫 */
             .sidebar ul {
                 transition: all 0.3s ease-in-out;
@@ -314,38 +381,47 @@ img {
             <p class="tt2">Freshman School Career ERxperience Camp</p>
         </div>
     </div>
-    <div class="content">
-        <div class="grid-container padding-right-400">
-        <div class="grid-text">
-            <li class="description description-list" style="color:yellow;"><a href="https://sites.google.com/view/cycustudentclub/" target="_blank">社團總覽</a></li>
+    <div class="content-wrapper">
+        <div class="content content_grid">
+            <div class="grid-container padding-right-400">
+                <div class="grid-text">
+                    <li class="description description-list" style="color:yellow;"><a href="https://sites.google.com/view/cycustudentclub/" target="_blank">社團總覽</a></li>
+                </div>
+                <div class="grid-image">
+                    <img src="img/giraffe.png" class="image-class" alt="Giraffe">
+                </div>
+            </div>
         </div>
-        <div class="grid-image">
-            <img src="img/giraffe.png" class="image-class">
+        <div class="content content_grid">
+            <div class="grid-container padding-right-150">
+                <div class="grid-image">
+                    <img src="img/panda.png" class="image-class" alt="Panda">
+                </div>
+                <div class="grid-text">
+                    <li class="description description-list" style="color:#F75000;"><a href="https://fm.cycu.edu.tw/" target="_blank">新生一網通</a></li>
+                    <p class="description description-list smaller-text" style="color:#004B97;">
+                        <a href="https://fm.cycu.edu.tw/大學部新生及暑轉生/註冊篇/新生註冊規定/" target="_blank"> 註冊篇</a>
+                    </p>
+                    <p class="description description-list smaller-text" style="color:#004B97;">
+                        <a href="https://fm.cycu.edu.tw/大學部新生及暑轉生/選課篇/選課時間/" target="_blank">選課篇</a>
+                    </p>
+                    <p class="description description-list smaller-text" style="color:#004B97;">
+                        <a href="https://fm.cycu.edu.tw/大學部新生及暑轉生/資料填寫區/資料填寫/" target="_blank"> 資料填寫</a>
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
-    <div class="content">
-        <div class="grid-container padding-right-150">
-        <div class="grid-image">
-            <img src="img/panda.png" class="image-class">
+        <div class="content content_grid">
+            <div class="grid-container padding-right-500">
+                <div class="grid-text">
+                    <li class="description description-list" style="color:#4B0091;"><a href="https://acadm.cycu.edu.tw/課務與註冊組聯合行服務中心/新生專區/" target="_blank">新生資料冊</a></li>
+                </div>
+                <div class="grid-image">
+                    <img src="img/goat.png" class="image-class" alt="Goat">
+                </div>
+            </div>
         </div>
-        <div class="grid-text text-container">
-            <li class="description description-list" style="color:#F75000;"><a href="https://fm.cycu.edu.tw/" target="_blank">新生一網通</a></li>
-            <p class="description description-list smaller-text" style="color:#004B97;"><a href="https://fm.cycu.edu.tw/大學部新生及暑轉生/註冊篇/新生註冊規定/" target="_blank">  註冊篇</a></p>
-            <p class="description description-list smaller-text" style="color:#004B97;"><a href="https://fm.cycu.edu.tw/大學部新生及暑轉生/選課篇/選課時間/" target="_blank">選課篇</a></p>
-            <p class="description description-list smaller-text" style="color:#004B97;"><a href="https://fm.cycu.edu.tw/大學部新生及暑轉生/資料填寫區/資料填寫/" target="_blank">  資料填寫</a></p>
-        </div>
-    </div>
-    </div>
-    <div class="content">
-        <div class="grid-container padding-right-500">
-        <div class="grid-text">
-            <li class="description description-list" style="color:#4B0091;"><a href="https://acadm.cycu.edu.tw/課務與註冊組聯合行服務中心/新生專區/" target="_blank">新生資料冊</a></li>
-        </div>
-        <div class="grid-image">
-            <img src="img/goat.png" class="image-class">
-        </div>
-    </div>
+    </div>    
     </div>
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
