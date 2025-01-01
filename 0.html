@@ -172,6 +172,20 @@ img {
   margin: 0;
   text-align: left; /* 恢復默認對齊 */
 }
+.text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1px; /* 增加項目之間的間距 */
+        width: 100%; /* 確保容器佔滿寬度 */
+        text-align: center; /* 文字置中 */
+    }
+
+    .text-container p,
+    .text-container li {
+        margin: 5px 0; /* 增加上下間距 */
+        display: block; /* 確保每個項目都獨佔一行 */
+        width: 100%; /* 確保每個項目都佔滿寬度 */
+    }
 
 .sidebar, .sidebar h2, .sidebar ul, .sidebar ul li, .sidebar ul li a, .description, .description-list {
   all: unset; /* 重置所有樣式 */
@@ -200,7 +214,7 @@ img {
         text-align: center;
     }
 .description {
-  font-size: 20px; /* 適中的文字大小 */
+  font-size: 22px; /* 適中的文字大小 */
   line-height: 1.6; /* 增加行高，提升可讀性 */
   font-family: "Arial", "新細明體", sans-serif; /* 選擇常見的字體 */
 }
