@@ -15,18 +15,18 @@
             font-style: normal;
         }
         .zen-old-mincho-regular {
-  font-family: "Zen Old Mincho", serif;
-  font-weight: 400;
-  font-style: normal;
-} 
-/*
-.dela-gothic-one-regular {
-  font-family: "Dela Gothic One", serif;
-  font-weight: 600;
-  font-size: 50px !important; 
-  font-style: normal;
-} */
-
+           font-family: "Zen Old Mincho", serif;
+           font-weight: 400;
+           font-style: normal;
+        } 
+    /*
+       .dela-gothic-one-regular {
+            font-family: "Dela Gothic One", serif;
+            font-weight: 600;
+            font-size: 50px !important; 
+            font-style: normal;
+        }
+    */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -68,38 +68,37 @@
         }
 
         .content {
-    display: flex;
-    justify-content: center;
-    align-items: top;
-    margin: 0;
-    text-align: center;
-    padding: 20px;
-    width: 100%; /* 添加這行 */
-}
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;  /* 設定最大寬度 */
-    margin: 0 auto;     /* 整體置中 */
-}
-.content-wrapper .content:nth-child(even) {
-    align-self: flex-end;    /* 偶數項靠右 */
-    margin-right: 45%;     /* 右側間距 */
-}
-
-.content-wrapper .content:nth-child(odd) {
-    align-self: flex-start;  /* 奇數項靠左 */
-    margin-left: 42%;      /* 左側間距 */
-}
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+            width: 100%; /* 添加這行 */
+        }
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;  /* 設定最大寬度 */
+            margin: 0 auto;     /* 整體置中 */
+        }
+        .content-wrapper .content:nth-child(even) {
+            align-self: flex-end;    /* 偶數項靠右 */
+            margin-right: 45%;     /* 右側間距 */
+        }
+        .content-wrapper .content:nth-child(odd) {
+            align-self: flex-start;  /* 奇數項靠左 */
+            margin-left: 42%;      /* 左側間距 */
+        }
         .tt1 {
           font-size: 50px !important; /* 提升優先權，確保生效 */
-}
-.tt2 {
+        }
+        .tt2 {
           font-size: 30px !important; /* 提升優先權，確保生效 */
-}
+        }
         .content h1{
             color:#FFD306;
         }
@@ -107,140 +106,136 @@
             color:#CDCD9A;
         }
         .content_grid {
-    display: flex;
-    flex-direction: column;
-    margin: 10px auto; /* 改為 auto */
-    padding: 15px;
-    background-color: #D9FFFF;
-    border-radius: 8px;
-    width: fit-content;
-    max-width: 100%;
-}
+            display: flex;
+            flex-direction: column;
+            margin: 10px auto; /* 改為 auto */
+            padding: 15px;
+            background-color: #D9FFFF;
+            border-radius: 8px;
+            width: fit-content;
+            max-width: 100%;
+        }
         .gap_a{
             margin: 0;
             line-height: 0.3; 
         }
         .description {
-  font-size: 30px; /* 適中的文字大小 */
-  line-height: 1.6; /* 增加行高，提升可讀性 */
-  font-family: "Arial", "新細明體", sans-serif; /* 選擇常見的字體 */
-}
-.smaller-text {
-  font-size: 24px; 
-}
-
-
-.description-list {
-  list-style-type: none; /* 去掉項目前面的點 */
-  padding: 0; /* 去掉預設的內邊距 */
-  margin: 0; /* 去掉預設的外邊距 */
-}
-
-.description-list a {
-  text-decoration: none; /* 去除超連結的底線 */
-  color: inherit; /* 繼承父元素的文字顏色 */
-}
-
-.description-list a:hover {
-    background-color: #ffffff; /* 背景變為白色 */
-    color: #ff0000; /* 文字變為紅色 */
-    text-decoration: none; /* 移除底線 */
-    border-radius: 8px; /* 添加圓角，數值可以調整 */
-    padding: 4px; /* 增加內邊距，讓圓角效果更明顯 */
-    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease; /* 添加平滑過渡效果 */
-}
-.image-class {
-  display: block; /* 確保圖片是區塊級元素 */
-  max-width: 150px; /* 限制圖片最大寬度 */
-  max-height: 150px; /* 限制圖片最大高度 */
-  height: auto; /* 自動調整高度以保持比例 */
-  margin: 10px auto; /* 上下有間距，且水平置中 */
-  background-color: transparent; /* 確保背景透明 */
-}
-
+            font-size: 30px; /* 適中的文字大小 */
+            line-height: 1.6; /* 增加行高，提升可讀性 */
+            font-family: "Arial", "新細明體", sans-serif; /* 選擇常見的字體 */
+        }
+        .smaller-text {
+            font-size: 24px; 
+        }
+        .description-list {
+            list-style-type: none; /* 去掉項目前面的點 */
+            padding: 0; /* 去掉預設的內邊距 */
+            margin: 0; /* 去掉預設的外邊距 */
+        }
+        .description-list a {
+            text-decoration: none; /* 去除超連結的底線 */
+            color: inherit; /* 繼承父元素的文字顏色 */
+        }
+        .description-list a:hover {
+            background-color: #ffffff; /* 背景變為白色 */
+            color: #ff0000; /* 文字變為紅色 */
+            text-decoration: none; /* 移除底線 */
+            border-radius: 8px; /* 添加圓角，數值可以調整 */
+            padding: 4px; /* 增加內邊距，讓圓角效果更明顯 */
+            transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease; /* 添加平滑過渡效果 */
+        }
+        .image-class {
+            display: block; /* 確保圖片是區塊級元素 */
+            max-width: 150px; /* 限制圖片最大寬度 */
+            max-height: 150px; /* 限制圖片最大高度 */
+            height: auto; /* 自動調整高度以保持比例 */
+            margin: 10px auto; /* 上下有間距，且水平置中 */
+            background-color: transparent; /* 確保背景透明 */
+        }
         .menu-toggle {
             display: none;
         }
         .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    gap: 10px;
-    margin: 0 auto; /* 添加這行 */
-    width: fit-content; /* 添加這行 */
-}
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+            gap: 10px;
+            margin: 0 auto; /* 添加這行 */
+            width: fit-content; /* 添加這行 */
+        }
+        .grid-text {
+            display: flex;
+            flex-direction: column;
+            flex-direction: column;
+            flex-direction: column;
+            gap: 15px;  /* 設定項目之間的間距 */
+            flex-direction: column;
+            align-items: flex-start;  /* 讓內容靠左對齊 */
+        }
+        .grid-text li,
+        .grid-text p {
+            margin: 0;  /* 移除預設的 margin */
+            padding: 0;  /* 移除預設的 padding */
+            width: 100%;  /* 確保每個項目佔滿寬度 */
+            line-height: 1.5;  /* 調整行高 */
+        }
 
-.grid-text {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;  /* 設定項目之間的間距 */
-    align-items: flex-start;  /* 讓內容靠左對齊 */
-}
-.grid-text li,
-.grid-text p {
-    margin: 0;  /* 移除預設的 margin */
-    padding: 0;  /* 移除預設的 padding */
-    width: 100%;  /* 確保每個項目佔滿寬度 */
-    line-height: 1.5;  /* 調整行高 */
-}
+  /* 如果你想要連結也垂直排列 */
+        .grid-text a {
+            display: block;  /* 讓連結變成區塊元素 */
+            margin-bottom: 5px;  /* 連結之間的間距 */
+        }
 
-/* 如果你想要連結也垂直排列 */
-.grid-text a {
-    display: block;  /* 讓連結變成區塊元素 */
-    margin-bottom: 5px;  /* 連結之間的間距 */
-}
-
-/* 移除最後一個連結的底部間距 */
-.grid-text a:last-child {
-    margin-bottom: 0;
-}
-.text-container {
-  display: flex;
-  flex-direction: column; /* 垂直排列 */
-  align-items: center; /* 水平置中（可選） */
-  gap: 1px; /* 元素之間的間距 */
-}
-.grid-image {
-  max-width: 100%; /* 圖片寬度不超過容器 */
-  height: auto; /* 保持圖片比例 */
-}
+  /* 移除最後一個連結的底部間距 */
+        .grid-text a:last-child {
+            margin-bottom: 0;
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            align-items: center; /* 水平置中（可選） */
+            gap: 1px; /* 元素之間的間距 */
+        }
+        .grid-image {
+            max-width: 100%; /* 圖片寬度不超過容器 */
+            height: auto; /* 保持圖片比例 */
+        }
 
         /* RWD 設計 */
-        @media screen and (max-width: 913px) {
-            body, div, ul, li, h1, h2, p, a, img {
-  margin: 0;
-  padding: 0;
-  border: none;
-  font-size: 100%;
-  font-family: inherit;
-  line-height: normal;
-  text-decoration: none;
-  color: inherit;
-  list-style: none;
-  box-sizing: border-box;
-  background: none;
-}
-.content-wrapper .content:nth-child(even),
+@media screen and (max-width: 913px) {
+    body, div, ul, li, h1, h2, p, a, img {
+        margin: 0;
+        padding: 0;
+        border: none;
+        font-size: 100%;
+        font-family: inherit;
+        line-height: normal;
+        text-decoration: none;
+        color: inherit;
+        list-style: none;
+        box-sizing: border-box;
+        background: none;
+    }
+    .content-wrapper .content:nth-child(even),
     .content-wrapper .content:nth-child(odd) {
         align-self: center;
         margin: 0;
     }
 
-img {
-  max-width: 100px;
-  max-height: 100px;
-  display: inline; /* 默認行內元素 */
-}
-
-.grid-container, .grid-text, .grid-image, .text-container, .gap_a, .content, .menu-toggle {
-  display: block; /* 重置為塊級元素 */
-  gap: 0;
-  padding: 0;
-  margin: 0;
-  text-align: left; /* 恢復默認對齊 */
-}
-.text-container {
+    img {
+        max-width: 100px;
+        max-height: 100px;
+        display: inline; /* 默認行內元素 */
+   }
+    .grid-container, .grid-text, .grid-image, .text-container, .gap_a, .content, .menu-toggle {
+        display: block; /* 重置為塊級元素 */
+        gap: 0;
+        padding: 0;
+        margin: 0;
+        text-align: left; /* 恢復默認對齊 */
+    }
+    .text-container {
         display: flex;
         flex-direction: column;
         gap: 1px; /* 增加項目之間的間距 */
@@ -255,21 +250,20 @@ img {
         width: 100%; /* 確保每個項目都佔滿寬度 */
     }
 
-.sidebar, .sidebar h2, .sidebar ul, .sidebar ul li, .sidebar ul li a, .description, .description-list {
-  all: unset; /* 重置所有樣式 */
-}
+   .sidebar, .sidebar h2, .sidebar ul, .sidebar ul li, .sidebar ul li a, .description, .description-list {
+        all: unset; /* 重置所有樣式 */
+   }
 
-.image-class {
-  display: inline;
-  background: none; /* 清除背景設置 */
-  margin: 0; /* 移除上下內邊距 */
-}
-
-            body {
-                padding-top: 50px; /* 為固定導航欄預留空間 */
-                background-image: url(img/bg.png);
-            }
-            .tt1 {
+   .image-class {
+        display: inline;
+        background: none; /* 清除背景設置 */
+        margin: 0; /* 移除上下內邊距 */
+   }
+    body {
+        padding-top: 50px; /* 為固定導航欄預留空間 */
+        background-image: url(img/bg.png);
+    }
+    .tt1 {
         font-size: 30px !important; /* 適當縮小字體大小 */
         text-align: center;
     }
@@ -277,12 +271,12 @@ img {
         font-size: 16px !important; /* 適當縮小字體大小 */
         text-align: center;
     }
-.content-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自適應列數 */
-    gap: 20px; /* 區塊間距 */
-    padding: 20px;
-}
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自適應列數 */
+        gap: 20px; /* 區塊間距 */
+        padding: 20px;
+    }
     /* 內容區塊的排版優化 */
     .content_grid {
         display: flex;
@@ -336,13 +330,15 @@ img {
         padding: 0;
     }
     .description-list:hover {
-    background-color: #ffffff; /* 背景變為白色 */
-    color: #ff0000; /* 文字變為紅色 */
-    text-decoration: none; /* 移除底線 */
-    border-radius: 8px; /* 添加圓角，數值可以調整 */
-    padding: 4px; /* 增加內邊距，讓圓角效果更明顯 */
-    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease; /* 添加平滑過渡效果 */
-}
+        background-color: #ffffff; /* 背景變為白色 */
+        color: #ff0000; /* 文字變為紅色 */
+        text-decoration: none; /* 移除底線 */
+        border-radius: 8px; /* 添加圓角，數值可以調整 */
+        border-radius: 8px; /* 添加圓角，數值可以調整 */
+        padding: 4px; /* 增加內邊距，讓圓角效果更明顯 */
+        border-radius: 8px; /* 添加圓角，數值可以調整 */
+        transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease; /* 添加平滑過渡效果 */
+    }
 
     /* 確保第二個區塊的圖片在左邊 */
     .grid-container:nth-child(even) {
@@ -365,75 +361,67 @@ img {
     .gap_a{
         margin-top:3%
     }
-            .sidebar {
-                width: 100%;
-                height: auto;
-                color: white; 
-                position: fixed;
-                top: 0;
-                left: 0;
-                padding: 0;
-                z-index: 1000;
-            }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        color: white; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0;
+        z-index: 1000;
+    }
+    .menu-toggle {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+    }
+    .sidebar h2 {
+        display: none;
+    }
 
-            .menu-toggle {
-                display: block;
-                width: 100%;
-                padding: 15px;
-                background-color: #333;
-                color: white;
-                border: none;
-                cursor: pointer;
-                text-align: center;
-                font-size: 16px;
-            }
+    .sidebar ul {
+        display: none;
+        padding: 10px 0;
+        margin: 0;
+        background-color: #333;
+    }
+    .sidebar ul.show {
+        display: block;
+    }
+    .sidebar ul li {
+        margin: 0;
+        text-align: center;
+    }
+    .sidebar ul li a {
+        display: block;
+        padding: 15px;
+    }
+   /* 添加過渡動畫 */
+    .sidebar ul {
+        transition: all 0.3s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .sidebar ul.show {
+        max-height: 300px;
+    }
 
-            .sidebar h2 {
-                display: none;
-            }
-
-            .sidebar ul {
-                display: none;
-                padding: 10px 0;
-                margin: 0;
-                background-color: #333;
-            }
-
-            .sidebar ul.show {
-                display: block;
-            }
-
-            .sidebar ul li {
-                margin: 0;
-                text-align: center;
-            }
-
-            .sidebar ul li a {
-                display: block;
-                padding: 15px;
-            }
-
-            /* 添加過渡動畫 */
-            .sidebar ul {
-                transition: all 0.3s ease-in-out;
-                max-height: 0;
-                overflow: hidden;
-            }
-
-            .sidebar ul.show {
-                max-height: 300px;
-            }
-
-            /* 箭頭旋轉動畫 */
-            .menu-toggle .arrow {
-                display: inline-block;
-                transition: transform 0.3s ease;
-            }
-
-            .menu-toggle.active .arrow {
-                transform: rotate(180deg);
-            }
-        }
+    /* 箭頭旋轉動畫 */
+    .menu-toggle .arrow {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+    .menu-toggle.active .arrow {
+        transform: rotate(180deg);
+    }
+}
     </style>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
