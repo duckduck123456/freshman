@@ -320,7 +320,7 @@
       }
         .content {
             width: 100%;
-            padding: 15px; 
+            padding: 5%; 
             position: relative; /* 添加這行 */
             margin-top: 0;
             margin-bottom:0 ;
@@ -343,8 +343,6 @@
        .grid-container, .grid-text, .grid-image, .text-container, .gap_a, .content, .menu-toggle {
             display: block; /* 重置為塊級元素 */
             gap: 0;
-            padding: 0;
-            margin: 0;
             text-align: center; /* 恢復默認對齊 */
        }
       .text-container {
@@ -387,8 +385,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自適應列數 */
         gap: 20px; /* 區塊間距 */
-        padding: 20px;
-        width: 100%;
+        padding: 3%;
         margin-top: 0;
         margin-bottom:0 ;
         margin-left: 8%;
@@ -399,8 +396,8 @@
     .content_grid {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        margin: 0px auto;
+        width: 110%;
+        margin: 0px 0px 0px 0px;
         padding: 0px;
         background-color: #D9FFFF;
         border-radius: 8px;
@@ -424,18 +421,18 @@
     .grid-image {
         width: 100%;
         display: flex;
-        margin: auto 0px;
         justify-content: center;
         align-items: center;
+        margin:2%;
     }
 
     .image-class {
         width: 100%;
         height: 100%;
+        padding-right: 6%;
         object-fit: contain;
         display: inline;
         background: none; /* 清除背景設置 */
-        margin: 0%; /* 移除上下內邊距 */
     }
 
     /* 文字容器 */
