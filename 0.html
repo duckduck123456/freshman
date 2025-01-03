@@ -303,9 +303,18 @@
                 opacity: 0.15;
             }
         }
+        .phone_head{
+            display: none;
+        }
         /* RWD 設計 */
   @media screen and (max-width: 1025px) {
-        body, div, ul, li, h1, h2, p, a, img {
+        .pc_head{
+            display: none;
+        }
+        .phone_head{
+            display: block;
+        }
+        div, ul, li, h1, h2, p, a, img {
             margin: 0;
             padding: 0;
             border: none;
@@ -319,16 +328,16 @@
             background: none;
       }
         .content {
-            width: 100%;
-            padding: 5%; 
+            /* padding: 10px; */
+            box-sizing: border-box;
             position: relative; /* 添加這行 */
-            margin-top: 0;
-            margin-bottom:0 ;
-            margin-left: 8%;
-            margin-right: 8%;
-
+            width: 80%; /* 替代 left/right */
+            margin: 0 auto; /* 使用 auto 實現水平居中 */
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            text-align: center;
       }
-
         .content-wrapper .content:nth-child(even),
         .content-wrapper .content:nth-child(odd) {
             align-self: center;
@@ -343,6 +352,8 @@
        .grid-container, .grid-text, .grid-image, .text-container, .gap_a, .content, .menu-toggle {
             display: block; /* 重置為塊級元素 */
             gap: 0;
+            padding: 0;
+            margin: 0;
             text-align: center; /* 恢復默認對齊 */
        }
       .text-container {
@@ -364,6 +375,11 @@
         all: unset; /* 重置所有樣式 */
    }
 
+   .image-class {
+        display: inline;
+        background: none; /* 清除背景設置 */
+        margin: 0; /* 移除上下內邊距 */
+   }
     body {
         padding-top: 50px; /* 為固定導航欄預留空間 */
         background-image: url(img/bg.png);
@@ -385,20 +401,18 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自適應列數 */
         gap: 20px; /* 區塊間距 */
-        padding: 3%;
-        margin-top: 0;
-        margin-bottom:0 ;
-        margin-left: 8%;
-        margin-right: 8%;
+        padding: 20px;
+        width: 100%;
+        margin: 0;
         box-sizing: border-box;  /* 確保padding不會增加寬度 */
     }
     /* 內容區塊的排版優化 */
     .content_grid {
         display: flex;
         flex-direction: column;
-        width: 110%;
-        margin: 0px 0px 0px 0px;
-        padding: 0px;
+        width: 100%;
+        margin: 0px auto;
+        padding: 15px;
         background-color: #D9FFFF;
         border-radius: 8px;
     }
@@ -409,10 +423,7 @@
         align-items: center;
         width: 100%;
         gap: 10px;
-        margin-top: 0;
-        margin-bottom:8% ;
-        margin-left: 0;
-        margin-right: 8%;
+        margin: 0 auto;  /* 水平置中 */
         justify-content: center;  /* 內容置中對齊 */
         box-sizing: border-box;
     }
@@ -423,16 +434,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin:2%;
     }
 
     .image-class {
-        width: 100%;
-        height: 100%;
-        padding-right: 6%;
+        width: 100px;
+        height: 100px;
         object-fit: contain;
-        display: inline;
-        background: none; /* 清除背景設置 */
     }
 
     /* 文字容器 */
@@ -476,6 +483,10 @@
     }
 
     /* 根據區域分配內容 */
+    .grid-container .grid-image {
+        grid-area: image;
+    }
+
     .grid-container .grid-text {
         grid-area: text;
     }
@@ -573,12 +584,20 @@
             <li><a href="dm_net.html" target="_blank">宿舍網路介紹</a></li> 
         </ul>
     </div>
-    <div class="content">
-        <div class="gap_a">
-            <h1 class="tt1 dela-gothic-one-regular" style="color: #FFD306;">2024新生資訊單</h1>
-            <p class="tt2" style="color: #CDCD9A;">Freshman School Career Experience Camp</p>
+    <header>
+    <div class="phone_head">
+        <h1 style="color:#FFD306; font-size: 30px;text-align: center;">2024新生資訊單</h1>
+        <h1 style="color:#CDCD9A; font-size: 16px;text-align: center;">Freshman School Career Experience Camp</h1>
     </div>
+    <div class="pc_head">
+        <div class="content">
+            <div class="gap_a">
+                <h1 class="tt1 dela-gothic-one-regular" style="color: #FFD306;">2024新生資訊單</h1>
+                <p class="tt2" style="color: #CDCD9A;">Freshman School Career Experience Camp</p>
+        </div>
+        </div>
     </div>
+</header>
     <div class="danmaku-container">
         <div class="danmaku-text potta-one-regular">歡迎來到中原大學，祝各位有個愉快的大學生活 ~</div>
     </div>
