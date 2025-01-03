@@ -96,6 +96,9 @@
         .tt1 {
           font-size: 50px !important; /* 提升優先權，確保生效 */
         }
+        .tt3 {
+          font-size: 50px !important; /* 提升優先權，確保生效 */
+        }
         .tt2 {
           font-size: 30px !important; /* 提升優先權，確保生效 */
         }
@@ -201,7 +204,15 @@
             max-width: 100%; /* 圖片寬度不超過容器 */
             height: auto; /* 保持圖片比例 */
         }
-
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: bottom;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+            width: 100%; /* 添加這行 */
+        }
         /* RWD 設計 */
 @media screen and (max-width: 913px) {
     body, div, ul, li, h1, h2, p, a, img {
@@ -270,6 +281,11 @@
     .tt2 {
         font-size: 16px !important; /* 適當縮小字體大小 */
         text-align: center;
+    }
+    .tt3 {
+        font-size: 23px !important; /* 適當縮小字體大小 */
+        text-align: center;
+        padding: 30px;
     }
     .content-wrapper {
         display: grid;
@@ -497,6 +513,9 @@
         </div>
     </div>    
     </div>
+    <footer>
+        <h1 class="tt3" style="color:#7B7B7B;">Chung Yuan Christian University</h1>
+    </footer>
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.sidebar ul');
