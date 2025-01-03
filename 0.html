@@ -222,7 +222,7 @@
             height: 60px; /* 減少高度 */
             position: relative;
             overflow: hidden;
-            background-color: rgba(240, 240, 240, 0.8); /* 改為半透明背景色 */
+            background-color: /*#FFEE00*/ rgba(240, 240, 240, 0.8); /* 改為半透明背景色 */
             animation: fadeOut 8s linear forwards; /* 添加淡出動畫 */
             z-index: 999; /* 提升 z-index，確保疊在其他物件上 */
         }
@@ -238,7 +238,13 @@
         }
 
 /* 淡出動畫：背景在 6s 時開始淡出，7s 完全消失 */
-@keyframes fadeOut {
+@keyframes fadeOut {/*
+    0%{
+        background-color: #FFEE00;
+    }
+    20%{
+        background-color: #FEFFB8;
+    } */
     0% {
         background-color: rgba(240, 240, 240, 0.8);
     }
