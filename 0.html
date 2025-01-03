@@ -318,13 +318,16 @@
             box-sizing: border-box;
             background: none;
       }
-      .content {
-            position: relative;
-            width: 80%;
-            margin: 0 auto;
-            padding: 0;
+        .content {
+            width: 100%;
+            margin: 0;
+            /* padding: 10px; */
             box-sizing: border-box;
-        }
+            position: relative; /* 添加這行 */
+            width: 80%; /* 替代 left/right */
+            margin: 0 auto; /* 使用 auto 實現水平居中 */
+            padding: 0;
+      }
         .content-wrapper .content:nth-child(even),
         .content-wrapper .content:nth-child(odd) {
             align-self: center;
@@ -399,9 +402,6 @@
         flex-direction: column;
         width: 100%;
         margin: 0px auto;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
         padding: 15px;
         background-color: #D9FFFF;
         border-radius: 8px;
