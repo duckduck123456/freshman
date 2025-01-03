@@ -228,6 +228,12 @@
         box-sizing: border-box;
         background: none;
     }
+    .content {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+    }
     .content-wrapper .content:nth-child(even),
     .content-wrapper .content:nth-child(odd) {
         align-self: center;
@@ -292,13 +298,16 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自適應列數 */
         gap: 20px; /* 區塊間距 */
         padding: 20px;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;  /* 確保padding不會增加寬度 */
     }
     /* 內容區塊的排版優化 */
     .content_grid {
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin: 0px ;
+        margin: 0px auto;
         padding: 15px;
         background-color: #D9FFFF;
         border-radius: 8px;
@@ -310,6 +319,9 @@
         align-items: center;
         width: 100%;
         gap: 10px;
+        margin: 0 auto;  /* 水平置中 */
+        justify-content: center;  /* 內容置中對齊 */
+        box-sizing: border-box;
     }
 
     /* 圖片容器 */
@@ -375,7 +387,12 @@
         grid-area: text;
     }
     .gap_a{
-        margin-top:3%
+        margin-top:3%;
+        width: 100%;
+
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
     }
     .sidebar {
         width: 100%;
@@ -384,6 +401,7 @@
         position: fixed;
         top: 0;
         left: 0;
+        right: 0;
         padding: 0;
         z-index: 1000;
     }
