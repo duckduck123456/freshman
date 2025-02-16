@@ -80,7 +80,7 @@
             background-color: transparent; /* 確保背景透明 */
         }
         .content_grid {
-            display: flex;
+            display: grid;
             flex-direction: row;
             grid-template-columns: 1fr 1fr; /*左右側平均寬度 */
             margin: 15px ; /* 改為 auto */
@@ -97,11 +97,19 @@
             text-decoration: none; /* 去除超連結的底線 */
             color: inherit; /* 繼承父元素的文字顏色 */
         }
-        .grid-container {
-            display: grid;
+        .content_grid a:hover{
+            background-color: #ffffff; /* 背景變為白色 */
+            color: #ff0000; /* 文字變為紅色 */
+            text-decoration: none; /* 移除底線 */
+            border-radius: 8px; /* 添加圓角，數值可以調整 */
+            padding: 5px; /* 內邊距，讓圓角效果更明顯 */
+            transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease; /* 添加平滑過渡效果 */
+        }
+        .grid-text {
+            display: flex;
             flex-direction: column;
-            line-height: 0;
-            gap: 1px; /* 讓連結之間有間距 */
+            gap: 15px;  /* 設定項目之間的間距 */
+            align-items: flex-start;  /* 讓內容靠左對齊 */
         }
         footer {
             text-align: center;
@@ -166,13 +174,13 @@
                 <div class="content_grid">
                     <img src="img/giraffe.png" alt="圖片1">
                     <div>
-                        <a href="https://acadm.cycu.edu.tw/課務與註冊組聯合行服務中心/行事曆/" target="_blank"><h2 style="color:#EA7500;">行事曆</h2></a>
+                        <a href="https://acadm.cycu.edu.tw/課務與註冊組聯合行服務中心/行事曆/" target="_blank" style="color:#EA7500;">行事曆</a>
                     </div>
                 </div>
             </div>
             <div class="section reverse" id="section2">
                 <div class="content_grid">
-                    <div class="grid-container">
+                    <div class="grid-text">
                         <li style="color:#F75000;"><a href="https://fm.cycu.edu.tw/" target="_blank">新生一網通</a></li>
                         <p style="color:#004B97;">
                             <a href="https://fm.cycu.edu.tw/大學部新生及暑轉生/註冊篇/新生註冊規定/" target="_blank"> 註冊篇</a>
@@ -188,16 +196,20 @@
                 </div>
             </div>
             <div class="section" id="section3">
-                <img src="img3.jpg" alt="圖片3">
-                <div>
-                    <a href="#"><h2>標題3</h2></a>
+                <div class="content_grid">
+                    <img src="img/goat.png" alt="圖片3">
+                    <div style="color:#4B0091;">
+                        <a href="https://acadm.cycu.edu.tw/課務與註冊組聯合行服務中心/新生專區/" target="_blank">新生資料冊</a>
+                    </div>
                 </div>
             </div>
             <div class="section reverse" id="section4">
-                <div>
-                    <a href="#"><h2>標題4</h2></a>
+                <div class="content_grid">
+                    <div style="color:#00BB00;">
+                        <a href="https://sites.google.com/view/cycustudentclub/" target="_blank">社團總覽</a>
+                    </div>
+                    <img src="img/penguin.png" alt="圖片4">
                 </div>
-                <img src="img4.jpg" alt="圖片4">
             </div>
         </div>
 
