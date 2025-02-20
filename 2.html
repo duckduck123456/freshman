@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新生資訊單</title>
+
+    <link rel="icon" href="img/icon/note.ico"/>
+
+    <meta property="og:title" content="新生資訊單" />
+    <meta property="og:description" content="這裡提供各位新生重要的注意事項跟連結" />
+    <meta property="og:image" content="img/icon/cycu.png"/>
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="" /> 
+
+    <link rel="stylesheet" href=" ">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-image: url(img/bg.png);
+        }
+        .sidebar {
+            width: 250px;
+            height: 100%;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding-top: 60px;
+            position: fixed;
+            left: 0;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .menu-btn {
+            display: none;
+        }
+        .content {
+            width: 80%; /* 可能是這裡設太大，你可以改成 60% 或其他值 */
+            max-width: 450px; /* 這個數值控制最大寬度，你可以改小一點 */
+            margin: 0 auto; /* 這行讓它置中，這個要保留 */
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .sections {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section {
+            display: flex;
+            width: 80%;
+           align-items: center;
+            justify-content: space-between;
+            background-color: #D9FFFF;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .section img {
+            max-width: 150px;
+            max-height: 150px;
+            height: auto;
+            display: block;
+        }
+        .section .text {
+            flex: 1;
+            text-align: center;
+            font-size: 23px;
+            line-height: 2;
+        }
+        .text a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .text a:hover{
+            background-color: #ffffff;
+            color: #ff0000;
+            border-radius: 8px;
+            padding: 5px;
+        }
+        .section.reverse {
+            flex-direction: row-reverse;
+        }
+        .grid-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 23px;
+            width: 50%; /* 讓它佔區塊的一半，這樣比較均勻 */
+        }
+        .grid-text a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .grid-text a:hover {
+            background-color: #ffffff;
+            color: #ff0000;
+            border-radius: 8px;
+            padding: 5px;
+        }
+         /* 讓偶數區塊反轉排列 */
+         .sections > .section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                left: -250px;
+                transition: 0.3s;
+            }
+            .sidebar.active {
+                left: 0;
+            }
+            .menu-btn {
+                display: block;
+                font-size: 24px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                position: fixed;
+                top: 10px;
+                left: 10px;
+            }
+            .section, 
+            .section:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            /* 確保圖片和文字在垂直排列時看起來平衡 */
+            .section img,
+            .section .text,
+            .section .grid-text {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <h2>側邊欄</h2>
+        <ul>
+            <li><a href="https://i-learning.cycu.edu.tw/" target="_blank">i-Learning</a></li>
+            <li><a href="https://itouch.cycu.edu.tw/home" target="_blank">iTouch</a></li>
+            <li><a href="https://map.cycu.edu.tw/" target="_blank">校園地圖</a></li>
+            <li><a href="https://www.cycu.edu.tw/?page_id=2399" target="_blank">學系網站</a></li>
+            <li><a href="dm_net.html" target="_blank">宿舍網路介紹</a></li>
+        </ul>
+    </div>
+    
+    <button class="menu-btn" onclick="toggleSidebar()" style="background:white;">☰</button>
+    
+    <div class="content">
+        <h1 style="color:#FFD306;text-align: center;">新生資訊單</h1>
+        <h2 style="color:#CDCD9A;text-align: center;">Freshman School Career Experience Camp</h2>
+        
+        <div class="sections">
+            <div class="section">
+                <img src="img/giraffe.png" alt="圖片1">
+                <div class="text"><a href="https://acadm.cycu.edu.tw/行事曆/" target="_blank" style="color:#EA7500;">行事曆</a></div>
+            </div>
+            <div class="section">
+                <div class="grid-text">
+                    <a href="https://fm.cycu.edu.tw/" target="_blank" style="color:#F75000;">新生一網通</a>
+                    <a href="https://fm.cycu.edu.tw/註冊篇/" target="_blank" style="color:#004B97;">註冊</a>
+                    <a href="https://fm.cycu.edu.tw/選課篇/" target="_blank" style="color:#004B97;">選課</a>
+                    <a href="https://fm.cycu.edu.tw/資料填寫/" target="_blank" style="color:#004B97;">資料填寫</a>
+                </div>
+                <img src="img/panda.png" alt="圖片2">
+            </div>
+            <div class="section">
+                <img src="img/goat.png" alt="圖片3">
+                <div class="text" style="color:#4B0091;"><a href="https://acadm.cycu.edu.tw/新生專區/" target="_blank" >新生資料冊</a></div>
+            </div>
+            <div class="section">
+                <div class="text"><a href="https://sites.google.com/view/cycustudentclub/" target="_blank" style="color:#00BB00;">社團總覽</a></div>
+                <img src="img/penguin.png" alt="圖片4">
+            </div>
+        </div>
+        
+        <footer style="color:#7B7B7B; text-align: center;">Chung Yuan Christian University</footer>
+    </div>
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
