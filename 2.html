@@ -115,8 +115,11 @@
             padding: 5px;
         }
          /* 讓偶數區塊反轉排列 */
-         .sections > .section:nth-child(even) {
-            flex-direction: row-reverse;
+        .section:nth-child(even) {
+            align-self: flex-end;    /* 偶數項靠右 */
+        }
+        .section:nth-child(odd) {
+            align-self: flex-start;  /* 奇數項靠右邊 */
         }
         @media (max-width: 768px) {
             .sidebar {
@@ -148,12 +151,16 @@
             .section .grid-text {
                 margin: 10px 0;
             }
+            .section:nth-child(even),
+            .section:nth-child(odd)  {
+            align-self: center;    /* 偶數項靠右 */
         }
+    }
     </style>
 </head>
 <body>
     <div class="sidebar" id="sidebar">
-        <h2>側邊欄</h2>
+        <h2>重要的學校網站</h2>
         <ul>
             <li><a href="https://i-learning.cycu.edu.tw/" target="_blank">i-Learning</a></li>
             <li><a href="https://itouch.cycu.edu.tw/home" target="_blank">iTouch</a></li>
