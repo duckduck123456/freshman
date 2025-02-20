@@ -70,6 +70,14 @@
             padding: 20px;
             margin: 15px 0;
         }
+
+        /* 讓偶數區塊反轉排列 */
+        .section:nth-child(even) {
+            align-self: flex-end;    /* 偶數項靠右 */
+        }
+        .section:nth-child(odd) {
+            align-self: flex-start;  /* 奇數項靠右邊 */
+        }
         .section img {
             max-width: 150px;
             max-height: 150px;
@@ -114,12 +122,35 @@
             border-radius: 8px;
             padding: 5px;
         }
-         /* 讓偶數區塊反轉排列 */
-        .section:nth-child(even) {
-            align-self: flex-end;    /* 偶數項靠右 */
-        }
-        .section:nth-child(odd) {
-            align-self: flex-start;  /* 奇數項靠右邊 */
+
+        /*背景圖片*/
+        .gradient-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-image: url(img/school_door.jpg);
+            background-size: cover;
+            mask-image: linear-gradient(to left top, 
+                rgba(0,0,0,1) 0%,
+                rgba(0,0,0,0.8) 20%,
+                rgba(0,0,0,0.6) 40%,
+                rgba(0,0,0,0.4) 60%,
+                rgba(0,0,0,0.2) 80%,
+                rgba(0,0,0,0) 100%
+            );
+            -webkit-mask-image: linear-gradient(to left top,
+                rgba(0,0,0,1) 0%,
+                rgba(0,0,0,0.8) 20%,
+                rgba(0,0,0,0.6) 40%,
+                rgba(0,0,0,0.4) 60%,
+                rgba(0,0,0,0.2) 80%,
+                rgba(0,0,0,0) 100%
+            );
+            z-index: 2;
+            animation: fadeIn 2s ease-in 3s forwards;
         }
         @media (max-width: 768px) {
             .sidebar {
@@ -154,6 +185,11 @@
             .section:nth-child(even),
             .section:nth-child(odd)  {
             align-self: center;    /* 偶數項靠右 */
+        }
+  
+            /*背景圖片*/
+           .gradient-overlay {
+            display: none; /* 完全隱藏 */
         }
     }
     </style>
@@ -199,7 +235,7 @@
                 <img src="img/penguin.png" alt="圖片4">
             </div>
         </div>
-        
+        <div class="gradient-overlay"></div>
         <footer style="color:#7B7B7B; text-align: center;">Chung Yuan Christian University</footer>
     </div>
     <script>
