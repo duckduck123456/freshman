@@ -208,21 +208,30 @@
                 left: 12px;
             }
             .section {
-                flex-direction: row; /* 圖片統一放右邊 */
+                display: flex;
+                flex-direction: row;
                 align-items: center;
-                width: 95%; /* 手機上略縮小區塊 */
-                padding: 10px; /* 減少內間距 */
+                justify-content: space-between; /* 或者用 center，看視覺需求 */
+                gap: 5px; /* 控制圖片與文字的距離，縮小到 5px */
+                padding: 5px 10px; /* 調整內間距 */
             }
             .section, 
             .section:nth-child(even) {
                 text-align: center;
+                align-items: center; /* 垂直置中 */
+                justify-content: center; /* 水平置中 */
             }
     
             /* 確保圖片和文字在垂直排列時看起來平衡 */
             .section img,
             .section .text,
             .section .grid-text {
-                margin: 10px 0;
+                margin:5px;
+            }
+            .section img{
+                max-height:100px ;
+                align-items: center; /* 垂直置中 */
+                justify-content: center; /* 水平置中 */
             }
             .section:nth-child(even),
             .section:nth-child(odd)  {
@@ -231,7 +240,7 @@
             .big_font_footer,
             .big_font_title,
             .big_font_sub {
-                margin-top: 5% ;
+                margin-top: 5%;
                 white-space: normal ; /* 允許換行 */
                 text-align: center;
             }
