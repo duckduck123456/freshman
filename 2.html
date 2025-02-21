@@ -63,7 +63,7 @@
         .section {
             display: flex;
             width: 80%;
-           align-items: center;
+            align-items: center;
             justify-content: space-between;
             background-color: #D9FFFF;
             border-radius: 8px;
@@ -87,7 +87,7 @@
         .section .text {
             flex: 1;
             text-align: center;
-            font-size: 23px;
+            font-size: 27px;
             line-height: 2;
         }
         .text a{
@@ -109,6 +109,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            gap:10px;
             font-size: 23px;
             width: 50%; /* 讓它佔區塊的一半，這樣比較均勻 */
         }
@@ -122,17 +123,9 @@
             border-radius: 8px;
             padding: 5px;
         }
-        .big_font_title{ /*標題*/
-            margin-top: 10%; /* 可以根據需要調整數值 */
-           font-size: 30px ; /* 調整到適合的大小 */
-            white-space: nowrap; /* 防止文字換行 */
-            overflow: visible; /* 允許文字溢出容器 */
-            width: 100% ;
-        }
-        .big_font_sub {  /*英文標題*/
-            margin-top: 5%; /* 減少上邊距 */
-            font-size: 25px ;
-            white-space: nowrap ;
+        .big_font{
+            margin-top: 10%; /* 減少上邊距 */
+            white-space: nowrap;
             overflow: visible ;
             text-align: center; /* 確保文本居中 */
             width: 100% ; /* 確保寬度佔滿 */
@@ -140,16 +133,18 @@
             margin-left: 0; /* 確保沒有左邊距 */
             margin-right: 0; /* 確保沒有右邊距 */
         }
+        .big_font_title{ /*標題*/
+            font-size: 50px ; /* 調整到適合的大小 */
+        }
+        .big_font_sub {  /*英文標題*/
+            font-size: 25px;
+        }
         .big_font_footer { /*footer*/
-            margin-top: 10%; /* 可以根據需要調整數值 */
-           font-size: 40px ; /* 調整到適合的大小 */
-            white-space: nowrap ; /* 防止文字換行 */
-            overflow: visible ; /* 允許文字溢出容器 */
-            width: 100% ;
+            font-size: 35px ; /* 調整到適合的大小 */
         }
 
           /* 你也可能需要調整 footer 的寬度 */
-          footer {
+        footer {
             width: 100% ;
             overflow: visible;
           }
@@ -180,12 +175,13 @@
                 rgba(0,0,0,0.2) 80%,
                 rgba(0,0,0,0) 100%
             );
-            z-index: 2;
+            z-index: -1;  /* 讓它比其他內容更底層 */
+            pointer-events: none; /* 讓它不阻擋點擊 */
             animation: fadeIn 0.5s ease-in 1.5s forwards;
         }
         @keyframes fadeIn {
            from { opacity: 0; }
-           to { opacity: 0.08; }
+           to { opacity: 0.1; }
         }
         @media (max-width: 768px) {
             .sidebar {
@@ -259,10 +255,10 @@
     <button class="menu-btn" onclick="toggleSidebar()" style="background:white;">☰</button>
     
     <div class="content">
-        <div class="big_font_title">
-            <h1 style="color:#FFD306;text-align: center;">新生資訊單</h1>
+        <div class="big_font">
+            <h1 style="color:#FFD306;" class="big_font_title">新生資訊單</h1>
         </div>
-            <h2 style="color:#CDCD9A;" class="big_font_sub ">Freshman School Career Experience Camp</h2>
+            <h2 style="color:#CDCD9A;" class="big_font_sub">Freshman School Career Experience Camp</h2>
         
         <div class="sections">
             <div class="section">
@@ -288,7 +284,7 @@
             </div>
         </div>
         <div class="gradient-overlay"></div>
-        <footer style="color:#7B7B7B; text-align: center;font-weight:bold;"><div class="big_font_footer">Chung Yuan Christian University</div></footer>
+        <footer style="color:#7B7B7B; text-align: center;font-weight:bold;"><div class="big_font big_font_footer">Chung Yuan Christian University</div></footer>
     </div>
     <script>
         function toggleSidebar() {
