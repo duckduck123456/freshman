@@ -140,7 +140,7 @@
             margin-left: 0; /* 確保沒有左邊距 */
             margin-right: 0; /* 確保沒有右邊距 */
         }
-        .big_font { /*footer*/
+        .big_font_footer { /*footer*/
             margin-top: 10%; /* 可以根據需要調整數值 */
            font-size: 40px ; /* 調整到適合的大小 */
             white-space: nowrap ; /* 防止文字換行 */
@@ -221,13 +221,13 @@
             .section:nth-child(odd)  {
             align-self: center;    /* 偶數項靠右 */
         }
-        .big_font,
-    .big_font_title,
-    .big_font_sub {
-        font-size: 20px ; /* 使用 !important 覆蓋原定義 */
-        margin-top: 5% ;
-        white-space: normal ; /* 允許換行 */
-    }
+            .big_font_footer,
+            .big_font_title,
+            .big_font_sub {
+            font-size: 20px ; /* 使用 !important 覆蓋原定義 */
+            margin-top: 5% ;
+            white-space: normal ; /* 允許換行 */
+        }
     
     /* 針對不同元素設置不同的大小
     .big_font_title {
@@ -288,7 +288,7 @@
             </div>
         </div>
         <div class="gradient-overlay"></div>
-        <footer style="color:#7B7B7B; text-align: center;"><div class="big_font">Chung Yuan Christian University</div></footer>
+        <footer style="color:#7B7B7B; text-align: center;"><div class="big_font_footer">Chung Yuan Christian University</div></footer>
     </div>
     <script>
         function toggleSidebar() {
