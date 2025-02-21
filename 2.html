@@ -124,7 +124,7 @@
             padding: 5px;
         }
         .big_font{
-            margin-top: 10%; /* 減少上邊距 */
+            margin-top: 7%; /* 減少上邊距 */
             white-space: nowrap;
             overflow: visible ;
             text-align: center; /* 確保文本居中 */
@@ -134,12 +134,16 @@
             margin-right: 0; /* 確保沒有右邊距 */
         }
         .big_font_title{ /*標題*/
-            font-size: 50px ; /* 調整到適合的大小 */
+            font-size: 55px ; /* 調整到適合的大小 */
+            letter-spacing: 12px; /* 設定文字間距 */
+            margin-bottom: 10px;
         }
         .big_font_sub {  /*英文標題*/
-            font-size: 25px;
-            white-space: nowrap;
-            min-width: max-content; /* 讓內容根據自身長度延展 */
+            display: block; /* 讓 h2 變成區塊級元素 */
+            text-align: center;
+            font-size: 30px;
+            margin: 0 auto; /* 水平置中 */
+            margin-bottom: 20px;
         }
         .big_font_footer { /*footer*/
             font-size: 35px ; /* 調整到適合的大小 */
@@ -147,7 +151,7 @@
 
           /* 你也可能需要調整 footer 的寬度 */
         footer {
-            width: 100% ;
+            width: 100%;
             overflow: visible;
           }
 
