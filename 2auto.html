@@ -332,7 +332,7 @@
             document.getElementById("sidebar").classList.toggle("active");
         }
        
-        fetch('latest.json')
+        fetch('course_schedules.json')
         .then(response => response.json())
         .then(data => {
             document.getElementById('course-link').href = data.latestFile;
