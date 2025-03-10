@@ -24,7 +24,7 @@
 
 ```json
 {
-    "latestFile": "course_schedules/114學年新生學涯體驗營課程配當表.pdf"
+    "latestFile": "課表/114學年新生學涯體驗營課程配當表.pdf"
 }
 ```
 <img src="img/readme_img/03.png" alt="替換新生體驗營課表指南" width="500">
