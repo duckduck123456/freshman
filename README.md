@@ -10,7 +10,6 @@ ___
 ```
 點兩下「課表」進入資料夾 --> Add file --> Upload files --> 將檔案拖放上來 --> Commit changes
                        (按鈕)       (按鈕)            (上傳檔案)        (綠色按鈕)
-
 ```
    ---
 <img src="img/readme_img/01.png" alt="替換新生體驗營課表指南" style="border: 20px solid black; width: 500px;">
