@@ -1,0 +1,56 @@
+{
+    "links": {
+        "calendar": {
+            "url": "https://acadm.cycu.edu.tw/行事曆/",
+            "description": "行事曆"
+        },
+        "i-learning": {
+            "url": "https://www.google.com/url?sa=t&source=web&url=https://i-learning.cycu.edu.tw/",
+            "description": "i-Learning"
+        },
+        "itouch": {
+            "url": "https://itouch.cycu.edu.tw/home",
+            "description": "iTouch"
+        },
+        "course-query": {
+            "url": "https://itouch.cycu.edu.tw/active_system/CourseQuerySystem/",
+            "description": "開課查詢系統"
+        },
+        "elective-system": {
+            "url": "https://myself.cycu.edu.tw/#/life/elective_system",
+            "description": "選課系統"
+        },
+        "campus-map": {
+            "url": "https://map.cycu.edu.tw/",
+            "description": "校園地圖"
+        },
+        "freshman-portal": {
+            "url": "https://fm.cycu.edu.tw/",
+            "description": "新生一網通"
+        },
+        "registration": {
+            "url": "https://fm.cycu.edu.tw/註冊篇/",
+            "description": "新生一網通 註冊篇"
+        },
+        "course-selection": {
+            "url": "https://fm.cycu.edu.tw/選課篇/",
+            "description": "新生一網通 選課篇"
+        },
+        "data-entry": {
+            "url": "https://fm.cycu.edu.tw/資料填寫/",
+            "description": "新生一網通 資料填寫"
+        },
+        "freshman-book": {
+            "url": "https://acadm.cycu.edu.tw/新生專區/",
+            "description": "新生資料冊"
+        },
+        "department-web": {
+            "url": "https://www.cycu.edu.tw/?page_id=2399",
+            "description": "學系網站"
+        },
+        "club-overview": {
+            "url": "https://sites.google.com/view/cycustudentclub/",
+            "description": "社團總覽"
+        }
+    }
+}
