@@ -40,10 +40,12 @@ ___
 ## 步驟
 1. **點擊 links.json 進入檔案**  
    在 GitHub 上，找到 `links.json` 並點擊進入。
+   <img src="img/readme_img/05.png" alt="替換新生體驗營課表指南" width="500">
 
-2. **修改對應的連結**  
+3. **修改對應的連結**  
    每個連結都有對應的 `description`（描述欄），可以根據描述找到對應的連結，並修改 `url` 欄位的內容。
+   <img src="img/readme_img/06.png" alt="替換新生體驗營課表指南" width="500">
 
-3. **儲存修改內容**  
+5. **儲存修改內容**  
    完成修改後，點擊「Commit changes」儲存更改，更改會立即生效。
 
