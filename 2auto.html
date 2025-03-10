@@ -300,7 +300,7 @@
         <div class="sections">
             <div class="section">
                 <img src="img/giraffe.png" alt="長頸鹿">
-                <div class="text" style="color:#EA7500;"><a href="112學年新生學涯體驗營課程配當表.pdf" target="_blank" >新生體驗營課表</a></div>
+                <div class="text" style="color:#EA7500;"><a id="course-link" href="#" target="_blank" >新生體驗營課表</a></div>
             </div>
             <div class="section">
                 <div class="grid-text">
@@ -331,6 +331,14 @@
         function toggleSidebar() {
             document.getElementById("sidebar").classList.toggle("active");
         }
+       
+        fetch('latest.json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('course-link').href = data.latestFile;
+        })
+        .catch(error => console.error("無法載入最新課表: ", error));
+
     </script>
     <!-- 
      
