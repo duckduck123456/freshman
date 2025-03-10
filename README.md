@@ -20,11 +20,11 @@ Add file --> Upload files --> 將檔案拖放上來 --> Commit changes
 - 找到 `"latestFile"` 這個欄位，並將其對應的檔名修改為最新課表的 PDF 檔名。
 
 #### 範例:
-如果原本的課表檔名是 `113學年新生學涯體驗營課程配當表.pdf`，但今年要改成 `114學年新生學涯體驗營課程配當表.pdf`，將修改 `latest.json` 如下：
+我設計了一個`course_schedules`的資料夾，專門存放新生學涯體驗營的課表。如果原本的課表檔名是 `113學年新生學涯體驗營課程配當表.pdf`，但今年要改成 `114學年新生學涯體驗營課程配當表.pdf`，將修改 `latest.json` 如下：
 
 ```json
 {
-    "latestFile": "114學年新生學涯體驗營課程配當表.pdf"
+    "latestFile": "course_schedules/114學年新生學涯體驗營課程配當表.pdf"
 }
 ```
 <img src="img/readme_img/03.png" alt="替換新生體驗營課表指南" width="500">
