@@ -31,6 +31,6 @@ Add file --> Upload files --> 將檔案拖放上來 --> Commit changes
 <img src="readme_img/04.png" alt="替換新生體驗營課表指南" width="500">
 這樣，系統就會自動導向最新的課表。
 
-### 3. 等待1~2分鐘，讓GitHub系統更新。
+### 3. 等待1~2分鐘，讓GitHub系統自動更新。
 
 
