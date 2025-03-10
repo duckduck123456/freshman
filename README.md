@@ -4,7 +4,7 @@ ___
 ## 步驟
 
 ### 1. 上傳當年最新課表
-請將當年最新的課表 PDF 檔案上傳至「課表」資料夾。
+將當年度最新的課表 PDF 檔案上傳至「課表」資料夾。
 
 **路徑:**
 ```
@@ -12,9 +12,9 @@ ___
                        (按鈕)       (按鈕)            (上傳檔案)        (綠色按鈕)
 ```
    ---
-<img src="img/readme_img/01.png" alt="替換新生體驗營課表指南" style="border: 20px solid black; width: 500px;">
+<img src="img/readme_img/01.png" alt="檔案上傳路徑" style="border: 20px solid black; width: 500px;">
    ---
-<img src="img/readme_img/02.png" alt="替換新生體驗營課表指南" style="border: 20px solid black; width: 500px;">
+<img src="img/readme_img/02.png" alt="記得要儲存更動" style="border: 20px solid black; width: 500px;">
    ---
 
 ### 2. 修改 `course_schedules.json` 中指定的檔案
@@ -32,9 +32,9 @@ ___
 }
 ```
    ---
-<img src="img/readme_img/03.png" alt="替換新生體驗營課表指南" width="500">
+<img src="img/readme_img/03.png" alt="course_schedules.json" width="500">
    ---
-<img src="img/readme_img/04.png" alt="替換新生體驗營課表指南" width="500">
+<img src="img/readme_img/04.png" alt="按右上角的筆，然後進行修改" width="500">
    ---
 這樣，系統就會自動導向最新的課表。
 
@@ -47,13 +47,13 @@ ___
 1. **點擊 links.json 進入檔案**  
    在 GitHub 上，找到 `links.json` 並點擊進入。
    ---
-   <img src="img/readme_img/05.png" alt="替換新生體驗營課表指南" width="500">
+   <img src="img/readme_img/05.png" alt="links.json" width="500">
    ---
 
 3. **修改對應的連結**  
    每個連結都有對應的 `description`（描述欄），可以根據描述找到對應的連結，並修改 `url` 欄位的內容。
    ---
-   <img src="img/readme_img/06.png" alt="替換新生體驗營課表指南" width="500">
+   <img src="img/readme_img/06.png" alt="描述欄和連結" width="500">
    ---
 
 5. **儲存修改內容**  
