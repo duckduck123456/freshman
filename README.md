@@ -11,8 +11,8 @@ Add file --> Upload files --> 將檔案拖放上來 --> Commit changes
 (按鈕)       (按鈕)            (上傳檔案)        (綠色按鈕)
 
 ```
-<img src="readme_img/01.png" alt="替換新生體驗營課表指南" style="border: 20px solid black; width: 500px;">
-<img src="readme_img/02.png" alt="替換新生體驗營課表指南" width="500">
+<img src="img/readme_img/01.png" alt="替換新生體驗營課表指南" style="border: 20px solid black; width: 500px;">
+<img src="img/readme_img/02.png" alt="替換新生體驗營課表指南" width="500">
 
 ### 2. 修改 `latest.json` 中指定的檔案
 
@@ -27,8 +27,8 @@ Add file --> Upload files --> 將檔案拖放上來 --> Commit changes
     "latestFile": "114學年新生學涯體驗營課程配當表.pdf"
 }
 ```
-<img src="readme_img/03.png" alt="替換新生體驗營課表指南" width="500">
-<img src="readme_img/04.png" alt="替換新生體驗營課表指南" width="500">
+<img src="img/readme_img/03.png" alt="替換新生體驗營課表指南" width="500">
+<img src="img/readme_img/04.png" alt="替換新生體驗營課表指南" width="500">
 這樣，系統就會自動導向最新的課表。
 
 ### 3. 等待1~2分鐘，讓GitHub系統自動更新。
