@@ -13,7 +13,7 @@ Add file --> Upload files
 ### 2. 修改 `latest.json` 中指定的檔案
 
 - 打開 `latest.json` 檔案。
-- 找到 `"latestFile"` 這個欄位，並將其值修改為最新課表的 PDF 檔名。
+- 找到 `"latestFile"` 這個欄位，並將其對應的檔名修改為最新課表的 PDF 檔名。
 
 #### 範例:
 如果原本的課表檔名是 `113學年新生學涯體驗營課程配當表.pdf`，但今年要改成 `114學年新生學涯體驗營課程配當表.pdf`，將修改 `latest.json` 如下：
