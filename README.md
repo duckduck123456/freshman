@@ -7,7 +7,7 @@
 
 **路徑:**
 ```
-點兩下進入「課表」資料夾 --> Add file --> Upload files --> 將檔案拖放上來 --> Commit changes
+點兩下「課表」進入資料夾 --> Add file --> Upload files --> 將檔案拖放上來 --> Commit changes
                        (按鈕)       (按鈕)            (上傳檔案)        (綠色按鈕)
 
 ```
