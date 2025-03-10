@@ -285,7 +285,7 @@
             <li><a id="itouch" href="#" target="_blank">iTouch</a></li>
             <li><a id="course-query" href="#" target="_blank">開課查詢系統</a></li>
             <li><a id="elective-system" href="#" target="_blank">選課系統</a></li>
-            <li><a id="campus-map" href="# target="_blank">校園地圖</a></li>
+            <li><a id="campus-map" href="#"  target="_blank">校園地圖</a></li>
         </ul>
     </div>
     
@@ -340,23 +340,23 @@
         .catch(error => console.error("無法載入最新課表: ", error));
 
         fetch('links.json')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('calendar').href = data.links.calendar;
-            document.getElementById('i-learning').href = data.links["i-learning"];
-            document.getElementById('itouch').href = data.links.itouch;
-            document.getElementById('course-query').href = data.links["course-query"];
-            document.getElementById('elective-system').href = data.links["elective-system"];
-            document.getElementById('campus-map').href = data.links["campus-map"];
-            document.getElementById('freshman-portal').href = data.links["freshman-portal"];
-            document.getElementById('registration').href = data.links.registration;
-            document.getElementById('course-selection').href = data.links["course-selection"];
-            document.getElementById('data-entry').href = data.links["data-entry"];
-            document.getElementById('freshman-book').href = data.links["freshman-book"];
-            document.getElementById('department-web').href = data.links["department-web"];
-            document.getElementById('club-overview').href = data.links["club-overview"];
-        })
-        .catch(error => console.error("無法載入連結: ", error));
+       .then(response => response.json())
+       .then(data => {
+        document.getElementById('calendar').href = data.links.calendar.url;
+        document.getElementById('i-learning').href = data.links["i-learning"].url;
+        document.getElementById('itouch').href = data.links.itouch.url;
+        document.getElementById('course-query').href = data.links["course-query"].url;
+        document.getElementById('elective-system').href = data.links["elective-system"].url;
+        document.getElementById('campus-map').href = data.links["campus-map"].url;
+        document.getElementById('freshman-portal').href = data.links["freshman-portal"].url;
+        document.getElementById('registration').href = data.links.registration.url;
+        document.getElementById('course-selection').href = data.links["course-selection"].url;
+        document.getElementById('data-entry').href = data.links["data-entry"].url;
+        document.getElementById('freshman-book').href = data.links["freshman-book"].url;
+        document.getElementById('department-web').href = data.links["department-web"].url;
+        document.getElementById('club-overview').href = data.links["club-overview"].url;
+    })
+    .catch(error => console.error("無法載入連結: ", error));
     </script>
     <!-- 
      
