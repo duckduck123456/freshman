@@ -7,7 +7,9 @@
 
 **路徑:**
 ```
-Add file --> Upload files
+Add file --> Upload files --> 將檔案拖放上來 --> Commit changes
+(綠色按鈕)                                      (綠色按鈕)
+
 ```
 
 ### 2. 修改 `latest.json` 中指定的檔案
