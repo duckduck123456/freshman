@@ -12,8 +12,11 @@ ___
                        (按鈕)       (按鈕)            (上傳檔案)        (綠色按鈕)
 
 ```
+---
 <img src="img/readme_img/01.png" alt="替換新生體驗營課表指南" style="border: 20px solid black; width: 500px;">
+---
 <img src="img/readme_img/02.png" alt="替換新生體驗營課表指南" style="border: 20px solid black; width: 500px;">
+---
 
 ### 2. 修改 `course_schedules.json` 中指定的檔案
 
