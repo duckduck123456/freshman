@@ -14,9 +14,9 @@
 <img src="img/readme_img/01.png" alt="替換新生體驗營課表指南" style="border: 20px solid black; width: 500px;">
 <img src="img/readme_img/02.png" alt="替換新生體驗營課表指南" width="500">
 
-### 2. 修改 `latest.json` 中指定的檔案
+### 2. 修改 `course_schedules.json` 中指定的檔案
 
-- 打開 `latest.json` 檔案。
+- 打開 `course_schedules.json` 檔案。
 - 找到 `"latestFile"` 這個欄位，並將其對應的檔名修改為最新課表的 PDF 檔名。
 
 #### 範例:
